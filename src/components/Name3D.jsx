@@ -56,7 +56,7 @@ export default function Name3D({ name, className = '', variant = 'hero' }) {
   const lastLine = words[words.length - 1]
 
   const textSizeClass = isNav
-    ? 'text-xs leading-tight sm:text-sm lg:text-base'
+    ? 'text-sm leading-tight sm:text-base lg:text-xl'
     : 'text-4xl leading-none sm:text-5xl lg:text-6xl'
 
   const depthLayers = isNav ? [8, 4] : [24, 16, 8]

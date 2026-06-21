@@ -44,7 +44,7 @@ export default function Navbar() {
         <button
           type="button"
           onClick={() => handleNavClick('home')}
-          className="min-w-0 max-w-[55vw] shrink text-left sm:max-w-none"
+          className="min-w-0 max-w-[65vw] shrink text-left sm:max-w-none"
         >
           <Name3D name={siteConfig.name} variant="nav" />
         </button>

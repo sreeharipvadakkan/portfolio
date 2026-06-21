@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative flex items-start overflow-hidden pt-16"
+      className="relative flex items-start overflow-hidden pt-12"
     >
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgb(0_230_118/0.08),transparent_50%)]" />
 
