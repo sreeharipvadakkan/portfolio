@@ -10,7 +10,7 @@ export default function Hero() {
     >
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgb(0_230_118/0.08),transparent_50%)]" />
 
-      <div className="mx-auto grid max-w-6xl flex-1 grid-cols-1 items-center gap-12 px-6 pt-4 pb-4 sm:pt-6 lg:grid-cols-2 lg:gap-16 lg:pt-8 lg:pb-4">
+      <div className="mx-auto grid max-w-6xl flex-1 grid-cols-1 items-center gap-12 px-6 pt-4 pb-2 sm:pt-6 lg:grid-cols-2 lg:gap-16 lg:pt-8 lg:pb-2">
         <motion.div
           initial={{ opacity: 0, x: -40 }}
           animate={{ opacity: 1, x: 0 }}
@@ -19,7 +19,7 @@ export default function Hero() {
           <h1 className="text-gradient text-3xl leading-tight font-bold tracking-tight sm:text-4xl lg:text-5xl">
             {siteConfig.title}
           </h1>
-          <p className="mt-6 max-w-lg text-lg text-white/90">{siteConfig.tagline}</p>
+          <p className="mt-2 max-w-lg text-lg text-white/90">{siteConfig.tagline}</p>
           <p className="mt-2 max-w-lg text-white/60">{siteConfig.subtitle}</p>
           <motion.a
             href="#contact"
