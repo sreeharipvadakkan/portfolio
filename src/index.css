@@ -11,6 +11,14 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+  }
+
+  #home,
+  #skills,
+  #projects,
+  #contact {
+    scroll-margin-top: 6rem;
   }
 
   body {

@@ -30,7 +30,14 @@ export default function Navbar() {
 
   const handleNavClick = (id) => {
     setMobileOpen(false)
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+    const element = document.getElementById(id)
+    const header = document.querySelector('header')
+    if (!element) return
+
+    const offset = (header?.offsetHeight ?? 96) + 12
+    const top = element.getBoundingClientRect().top + window.scrollY - offset
+
+    window.scrollTo({ top, behavior: 'smooth' })
   }
 
   return (

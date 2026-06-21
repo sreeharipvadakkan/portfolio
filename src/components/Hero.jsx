@@ -10,7 +10,7 @@ export default function Hero() {
     >
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgb(0_230_118/0.08),transparent_50%)]" />
 
-      <div className="mx-auto grid max-w-6xl flex-1 grid-cols-1 items-center gap-12 px-6 pt-4 pb-8 sm:pt-6 lg:grid-cols-2 lg:gap-16 lg:pt-8 lg:pb-10">
+      <div className="mx-auto grid max-w-6xl flex-1 grid-cols-1 items-center gap-12 px-6 pt-4 pb-4 sm:pt-6 lg:grid-cols-2 lg:gap-16 lg:pt-8 lg:pb-4">
         <motion.div
           initial={{ opacity: 0, x: -40 }}
           animate={{ opacity: 1, x: 0 }}
@@ -25,7 +25,7 @@ export default function Hero() {
             href="#contact"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
-            className="mt-8 inline-block rounded-full bg-gradient-to-r from-neon to-neon-dark px-8 py-3 font-medium text-black shadow-[0_0_30px_rgb(0_230_118/0.4)] transition-shadow hover:shadow-[0_0_40px_rgb(0_230_118/0.6)]"
+            className="mt-5 inline-block rounded-full bg-gradient-to-r from-neon to-neon-dark px-8 py-2.5 font-medium text-black shadow-[0_0_30px_rgb(0_230_118/0.4)] transition-shadow hover:shadow-[0_0_40px_rgb(0_230_118/0.6)]"
           >
             Let&apos;s Connect
           </motion.a>
