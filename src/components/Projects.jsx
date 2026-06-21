@@ -12,7 +12,7 @@ export default function Projects() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="mb-10 text-3xl font-bold text-white sm:mb-12"
+          className="mb-10 text-3xl font-bold text-white sm:mb-6"
         >
           Featured Projects
         </motion.h2>

@@ -3,10 +3,10 @@ export const siteConfig = {
   title: 'Frontend Developer',
   tagline: 'Building exceptional web and mobile experiences through modern technologies',
   subtitle: 'Frontend Developer with 4+ years of experience delivering scalable React, Angular, Flutter, and Android applications..',
-  email: 'hello@example.com',
-  github: 'https://github.com',
-  linkedin: 'https://linkedin.com',
-  instagram: 'https://instagram.com',
+  email: 'sreeharipvadakkkan@gmail.com',
+  github: 'https://github.com/sreeharipvadakkan',
+  linkedin: 'https://www.linkedin.com/in/sreehari-p-vadakkan-233952177?utm_source=share_via&utm_content=profile&utm_medium=member_android',
+  instagram: 'https://instagram.com/sreeharipvadakkkan',
 }
 
 export const navLinks = [

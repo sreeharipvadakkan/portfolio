@@ -28,7 +28,7 @@ function InstagramIcon({ size = 16 }) {
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-24">
+    <section id="contact" className="py-2">
       <div className="mx-auto max-w-6xl px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

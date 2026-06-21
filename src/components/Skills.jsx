@@ -71,14 +71,14 @@ function SkillCard({ skill, index, isHero }) {
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-16 sm:py-24">
+    <section id="skills" className="py-12 sm:py-16">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="mb-10 text-3xl font-bold text-white sm:mb-12"
+          className="mb-10 text-3xl font-bold text-white sm:mb-6"
         >
           Technical Expertise
         </motion.h2>

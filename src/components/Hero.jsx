@@ -7,11 +7,11 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative flex min-h-screen items-center overflow-hidden pt-20"
+      className="relative flex items-start overflow-hidden pt-16"
     >
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgb(0_230_118/0.08),transparent_50%)]" />
 
-      <div className="mx-auto grid max-w-6xl flex-1 grid-cols-1 items-center gap-12 px-6 py-16 lg:grid-cols-2 lg:gap-16">
+      <div className="mx-auto grid max-w-6xl flex-1 grid-cols-1 items-center gap-12 px-6 pt-4 pb-8 sm:pt-6 lg:grid-cols-2 lg:gap-16 lg:pt-8 lg:pb-10">
         <motion.div
           initial={{ opacity: 0, x: -40 }}
           animate={{ opacity: 1, x: 0 }}
