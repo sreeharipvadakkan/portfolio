@@ -71,7 +71,7 @@ function SkillCard({ skill, index, isHero }) {
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-12 sm:py-16">
+    <section id="skills" className="pb-12 sm:pb-16">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}

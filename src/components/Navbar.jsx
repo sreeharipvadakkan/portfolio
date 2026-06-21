@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
-import { navLinks } from '../data/portfolio'
+import { navLinks, siteConfig } from '../data/portfolio'
+import Name3D from './Name3D'
 
 export default function Navbar() {
   const [activeSection, setActiveSection] = useState('home')
@@ -43,9 +44,9 @@ export default function Navbar() {
         <button
           type="button"
           onClick={() => handleNavClick('home')}
-          className="text-lg font-bold tracking-wider text-neon glow-text sm:text-xl"
+          className="min-w-0 max-w-[55vw] shrink text-left sm:max-w-none"
         >
-          SPV
+          <Name3D name={siteConfig.name} variant="nav" />
         </button>
 
         <ul className="hidden items-center gap-8 md:flex">

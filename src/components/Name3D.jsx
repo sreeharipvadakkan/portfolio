@@ -6,22 +6,23 @@ import {
   useTransform,
 } from 'framer-motion'
 
-export default function Name3D({ name, className = '' }) {
+export default function Name3D({ name, className = '', variant = 'hero' }) {
+  const isNav = variant === 'nav'
   const containerRef = useRef(null)
   const mouseX = useMotionValue(0)
   const mouseY = useMotionValue(0)
   const isHovering = useMotionValue(0)
 
   const rotateX = useSpring(
-    useTransform(mouseY, [-0.5, 0.5], [18, -18]),
+    useTransform(mouseY, [-0.5, 0.5], [isNav ? 10 : 18, isNav ? -10 : -18]),
     { stiffness: 200, damping: 20 },
   )
   const rotateY = useSpring(
-    useTransform(mouseX, [-0.5, 0.5], [-18, 18]),
+    useTransform(mouseX, [-0.5, 0.5], [isNav ? -10 : -18, isNav ? 10 : 18]),
     { stiffness: 200, damping: 20 },
   )
   const scale = useSpring(
-    useTransform(isHovering, [0, 1], [1, 1.04]),
+    useTransform(isHovering, [0, 1], [1, isNav ? 1.02 : 1.04]),
     { stiffness: 200, damping: 20 },
   )
 
@@ -54,6 +55,34 @@ export default function Name3D({ name, className = '' }) {
   const firstLine = words.slice(0, -1).join(' ')
   const lastLine = words[words.length - 1]
 
+  const textSizeClass = isNav
+    ? 'text-xs leading-tight sm:text-sm lg:text-base'
+    : 'text-4xl leading-none sm:text-5xl lg:text-6xl'
+
+  const depthLayers = isNav ? [8, 4] : [24, 16, 8]
+
+  const nameContent = isNav ? (
+    <span className={`text-gradient block uppercase ${textSizeClass}`}>{name}</span>
+  ) : (
+    <>
+      <span className={`text-gradient block uppercase ${textSizeClass}`}>
+        {firstLine}
+      </span>
+      <span className={`text-gradient mt-1 block uppercase ${textSizeClass}`}>
+        {lastLine}
+      </span>
+    </>
+  )
+
+  const shadowContent = isNav ? (
+    <span className={`block uppercase ${textSizeClass}`}>{name}</span>
+  ) : (
+    <>
+      <span className={`block uppercase ${textSizeClass}`}>{firstLine}</span>
+      <span className={`mt-1 block uppercase ${textSizeClass}`}>{lastLine}</span>
+    </>
+  )
+
   return (
     <div
       ref={containerRef}
@@ -64,7 +93,9 @@ export default function Name3D({ name, className = '' }) {
       onMouseLeave={handleMouseLeave}
     >
       <motion.div
-        className="pointer-events-none absolute -inset-6 -z-10 rounded-3xl bg-neon/30 blur-3xl"
+        className={`pointer-events-none absolute -z-10 rounded-3xl bg-neon/30 blur-3xl ${
+          isNav ? '-inset-2' : '-inset-6'
+        }`}
         style={{ opacity: glowOpacity }}
         aria-hidden
       />
@@ -78,7 +109,7 @@ export default function Name3D({ name, className = '' }) {
         }}
         className="relative cursor-default"
       >
-        {[24, 16, 8].map((depth) => (
+        {depthLayers.map((depth) => (
           <div
             key={depth}
             className="pointer-events-none absolute inset-0 font-bold tracking-tight text-neon-dark/25 uppercase"
@@ -88,25 +119,15 @@ export default function Name3D({ name, className = '' }) {
             }}
             aria-hidden
           >
-            <span className="block text-4xl leading-none sm:text-5xl lg:text-6xl">
-              {firstLine}
-            </span>
-            <span className="mt-1 block text-4xl leading-none sm:text-5xl lg:text-6xl">
-              {lastLine}
-            </span>
+            {shadowContent}
           </div>
         ))}
 
         <div
-          className="relative font-bold tracking-tight uppercase"
+          className={`relative font-bold tracking-tight uppercase ${isNav ? 'whitespace-nowrap' : ''}`}
           style={{ transform: 'translateZ(30px)', transformStyle: 'preserve-3d' }}
         >
-          <span className="text-gradient block text-4xl leading-none sm:text-5xl lg:text-6xl">
-            {firstLine}
-          </span>
-          <span className="text-gradient mt-1 block text-4xl leading-none sm:text-5xl lg:text-6xl">
-            {lastLine}
-          </span>
+          {nameContent}
 
           <motion.div
             className="pointer-events-none absolute inset-0"
@@ -119,12 +140,14 @@ export default function Name3D({ name, className = '' }) {
             }}
             aria-hidden
           >
-            <span className="block text-4xl leading-none text-transparent sm:text-5xl lg:text-6xl">
-              {firstLine}
+            <span className={`block text-transparent uppercase ${textSizeClass}`}>
+              {isNav ? name : firstLine}
             </span>
-            <span className="mt-1 block text-4xl leading-none text-transparent sm:text-5xl lg:text-6xl">
-              {lastLine}
-            </span>
+            {!isNav && (
+              <span className={`mt-1 block text-transparent uppercase ${textSizeClass}`}>
+                {lastLine}
+              </span>
+            )}
           </motion.div>
         </div>
       </motion.div>

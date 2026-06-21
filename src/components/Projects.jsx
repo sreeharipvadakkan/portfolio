@@ -5,7 +5,7 @@ import { projects } from '../data/portfolio'
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-16 sm:py-24">
+    <section id="projects" className="pb-8 sm:pb-8">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}

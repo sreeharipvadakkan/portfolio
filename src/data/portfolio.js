@@ -1,8 +1,8 @@
 export const siteConfig = {
   name: 'SREEHARI P VADAKKAN',
-  title: 'Frontend Developer',
+  title: 'Software Developer',
   tagline: 'Building exceptional web and mobile experiences through modern technologies',
-  subtitle: 'Frontend Developer with 4+ years of experience delivering scalable React, Angular, Flutter, and Android applications..',
+  subtitle: 'Software Developer with 4+ years of experience delivering scalable React, Angular, Flutter, and Android applications..',
   email: 'sreeharipvadakkkan@gmail.com',
   github: 'https://github.com/sreeharipvadakkan',
   linkedin: 'https://www.linkedin.com/in/sreehari-p-vadakkan-233952177?utm_source=share_via&utm_content=profile&utm_medium=member_android',
@@ -42,25 +42,25 @@ export const skills = [
 export const projects = [
   {
     title: 'NYU Langone Health',
-    description: 'A real-time analytics platform with interactive data visualizations and AI-powered insights.',
+    description: 'The NYU Langone Health app offers easy access to healthcare services such as appointment scheduling, telehealth, and medical records. It provides a user-friendly interface for patients to manage their health and connect with providers, enhancing the overall healthcare experience.',
     tags: ['Android', 'Kotlin', 'VIPER Architecture', 'Jetpack Compose'],
     link: '#',
   },
   {
-    title: 'QRMS',
-    description: 'Full-stack e-commerce platform with secure payments, inventory management, and admin panel.',
+    title: 'QBTalentHub Platform',
+    description: 'The project developed an all-in-one internal platform for talent acquisition and workforce management, featuring automated resume processing, candidate evaluation, document generation, and salary processing to improve efficiency and accuracy.',
     tags: ['Angular', 'TypeScript', 'HTML', 'CSS', 'JavaScript'],
     link: '#',
   },
   {
     title: 'Thipolly',
-    description: 'Automated CI/CD pipeline with container orchestration and monitoring dashboards.',
+    description: 'The Thio Medication Management System is a medication tracking platform that uses secure IoT-enabled storage devices to improve inventory visibility, operational efficiency, and patient care. It includes tools for system administration, medication access, and distribution monitoring.',
     tags: ['Flutter', 'Dart', 'Bloc', 'Cubit', 'Provider'],
     link: '#',
   },
   {
     title: 'Travel App',
-    description: 'Automated CI/CD pipeline with container orchestration and monitoring dashboards.',
+    description: 'Travel App is an application designed to streamline and manage all organisational travel operations in one place. It enables employees to easily request and track travel, stay, and ticket bookings, while providing administrators with powerful tools to manage and monitor all travel-related activities.',
     tags: ['React', 'TypeScript', 'Formik', 'M-UI'],
     link: '#',
   },

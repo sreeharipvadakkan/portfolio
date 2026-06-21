@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion'
 import profileImg from '../assets/profile.png'
-import Name3D from './Name3D'
 import { siteConfig } from '../data/portfolio'
 
 export default function Hero() {
@@ -17,7 +16,6 @@ export default function Hero() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7, ease: 'easeOut' }}
         >
-          <Name3D name={siteConfig.name} className="mb-4" />
           <h1 className="text-gradient text-3xl leading-tight font-bold tracking-tight sm:text-4xl lg:text-5xl">
             {siteConfig.title}
           </h1>
